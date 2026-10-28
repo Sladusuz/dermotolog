@@ -1,0 +1,18 @@
+name: Pages diagnose
+# Vaqtinchalik, faqat o'qiydi: GitHub Pages sertifikat va DNS holatini chop etadi.
+on: workflow_dispatch
+permissions:
+  contents: read
+  pages: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pages site info
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "== /pages =="
+          gh api repos/${{ github.repository }}/pages || echo "pages call failed"
+          echo "== /pages/health =="
+          gh api repos/${{ github.repository }}/pages/health || echo "health call failed"
