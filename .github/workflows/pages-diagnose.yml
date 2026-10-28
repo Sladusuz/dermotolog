@@ -1,9 +1,9 @@
 name: Pages diagnose
-# Vaqtinchalik, faqat o'qiydi: GitHub Pages sertifikat va DNS holatini chop etadi.
+# Vaqtinchalik: GitHub Pages sertifikat holatini chop etadi va HTTPS'ni yoqib ko'radi.
 on: workflow_dispatch
 permissions:
   contents: read
-  pages: read
+  pages: write
 jobs:
   diagnose:
     runs-on: ubuntu-latest
@@ -12,7 +12,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          echo "== /pages =="
+          echo "== /pages (before) =="
           gh api repos/${{ github.repository }}/pages || echo "pages call failed"
-          echo "== /pages/health =="
-          gh api repos/${{ github.repository }}/pages/health || echo "health call failed"
+          echo
+          echo "== try enable HTTPS =="
+          gh api -X PUT repos/${{ github.repository }}/pages -F https_enforced=true -f cname=dr-zohid.uz || echo "enable https failed"
+          echo
+          echo "== /pages (after) =="
+          gh api repos/${{ github.repository }}/pages || echo "pages call failed"
