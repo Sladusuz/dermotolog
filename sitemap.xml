@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://dr-zohid.uz/</loc><lastmod>2026-10-28</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://dr-zohid.uz/maqola/</loc><lastmod>2026-10-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dr-zohid.uz/maqola/vitiligo.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://dr-zohid.uz/maqola/psoriaz.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://dr-zohid.uz/maqola/soch-tokilishi.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://dr-zohid.uz/maqola/akne.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://dr-zohid.uz/maqola/atopik-dermatit.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://dr-zohid.uz/maqola/zamburug.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
 </urlset>
