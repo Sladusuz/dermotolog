@@ -1,0 +1,8 @@
+.assetsignore
+wrangler.jsonc
+README.md
+netlify.toml
+CNAME
+.nojekyll
+.github
+.git
