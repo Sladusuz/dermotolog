@@ -408,8 +408,27 @@ body.cc input,body.cc textarea,body.cc select{cursor:text!important}
   .qgrid button{padding:10px;font-size:13px}
 }
 
-.lang{display:inline-flex;align-items:center;justify-content:center;height:46px;min-width:46px;padding:0 12px;border-radius:999px;border:1px solid rgba(241,231,217,.28);color:var(--bone);font:700 12px var(--sans);letter-spacing:.08em;transition:background .3s,color .3s,border-color .3s}.lang:hover{background:var(--bone);color:var(--bg)}
-@media(max-width:380px){.lang{height:42px;min-width:42px;padding:0 9px}.pillbtn{padding:0 16px}}
+.lg{position:relative}
+.lgb{display:inline-flex;align-items:center;gap:6px;height:46px;padding:0 12px 0 6px;border-radius:999px;border:1px solid rgba(241,231,217,.28);background:rgba(17,12,10,.2);color:var(--bone);cursor:pointer;transition:border-color .3s,background .3s}
+.lgb:hover,.lg.open .lgb{border-color:var(--clay);background:rgba(227,146,95,.12)}
+.lg .fl{display:block;width:32px;height:32px;border-radius:50%;overflow:hidden;flex:none;box-shadow:0 0 0 2px rgba(241,231,217,.16)}
+.lg .fl svg{display:block;width:100%;height:100%}
+.lgb .chev{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.lg.open .chev{transform:rotate(180deg)}
+.lgm{position:absolute;right:0;top:calc(100% + 14px);min-width:280px;padding:8px;border-radius:24px;background:#1a120f;border:1px solid rgba(241,231,217,.14);box-shadow:0 30px 60px -20px rgba(0,0,0,.7);opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top right;transition:opacity .25s,transform .25s,visibility .25s}
+.lg.open .lgm{opacity:1;visibility:visible;transform:none}
+.lgm a{display:flex;align-items:center;gap:14px;padding:12px;border-radius:18px;color:var(--bone);transition:background .2s}
+.lgm a:hover{background:rgba(241,231,217,.07)}
+.lgm a[aria-current=true]{background:rgba(227,146,95,.16)}
+.lgm .fl{width:46px;height:46px;box-shadow:0 0 0 3px rgba(241,231,217,.1)}
+.lgm .tx{display:block;min-width:0}
+.lgm b{display:block;font:700 17px/1.2 var(--sans)}
+.lgm small{display:block;margin-top:2px;font:500 13px/1.2 var(--sans);color:var(--mut)}
+.lgm .ck{margin-left:auto;flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--clay)}
+.lgm .ck svg{width:16px;height:16px;fill:none;stroke:#110c0a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:700px){.lg{position:static}.lgm{left:14px;right:14px;top:calc(100% + 8px);min-width:0;transform-origin:top center}}
+@media(max-width:400px){.hr{gap:6px}.hd{gap:8px}.lgb{height:42px;padding:0 8px 0 4px;gap:3px}.lg .fl{width:28px;height:28px}.lgm .fl{width:42px;height:42px}.pillbtn{height:42px;padding:0 14px;font-size:12px;letter-spacing:.03em}.burger{width:42px;height:42px}}
+@media(max-width:340px){.logo{font-size:20px}.pillbtn{padding:0 11px}}
 /* map */
 .mapw{position:relative;margin-top:clamp(40px,6vw,80px);border-radius:28px;overflow:hidden;border:1px solid rgba(17,12,10,.18);background:#d9cfc1;box-shadow:0 30px 60px -30px rgba(17,12,10,.45)}
 .mapw iframe{display:block;width:100%;height:clamp(360px,46vw,520px);border:0}
@@ -437,7 +456,7 @@ body.cc input,body.cc textarea,body.cc select{cursor:text!important}
 <header class="top" id="top"><div class="hd">
   <a href="#hero" class="logo">Dr.&nbsp;<i>Зохид</i></a>
   <nav class="menu" aria-label="Меню"><a href="#holatlar">Ҳолатлар</a><a href="#xizmat">Хизматлар</a><a href="#doktor">Шифокор</a><a href="#royxat">Рўйхат</a><a href="#faq">Саволлар</a></nav>
-  <div class="hr"><a class="lang" href="/ru/" hreflang="ru" lang="ru" aria-label="Русская версия сайта">RU</a><a class="pillbtn" data-mag href="#aloqa">Ёзилиш</a><button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i></button></div>
+  <div class="hr"><!--lg--><div class="lg" id="lg"><button class="lgb" id="lgb" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lgm" aria-label="Тилни танлаш"><span class="fl"><svg viewBox="0 0 60 60" aria-hidden="true"><defs><clipPath id="c9"><circle cx="30" cy="30" r="30"/></clipPath></defs><g clip-path="url(#c9)"><rect width="60" height="20" fill="#1eb0e6"/><rect y="20" width="60" height="20" fill="#fff"/><rect y="40" width="60" height="20" fill="#1fa14a"/><rect y="18" width="60" height="3" fill="#d52b1e"/><rect y="39" width="60" height="3" fill="#d52b1e"/><circle cx="15" cy="10" r="5.2" fill="#fff"/><circle cx="17.2" cy="10" r="4.4" fill="#1eb0e6"/><g fill="#fff"><circle cx="24" cy="6" r="1"/><circle cx="28" cy="9" r="1"/><circle cx="32" cy="6" r="1"/><circle cx="24" cy="13" r="1"/><circle cx="28" cy="16" r="1"/><circle cx="32" cy="13" r="1"/></g></g></svg></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button><div class="lgm" id="lgm" role="menu"><a role="menuitem" href="/" hreflang="uz-Cyrl" lang="uz" aria-current="true"><span class="fl"><svg viewBox="0 0 60 60" aria-hidden="true"><defs><clipPath id="c1"><circle cx="30" cy="30" r="30"/></clipPath></defs><g clip-path="url(#c1)"><rect width="60" height="20" fill="#1eb0e6"/><rect y="20" width="60" height="20" fill="#fff"/><rect y="40" width="60" height="20" fill="#1fa14a"/><rect y="18" width="60" height="3" fill="#d52b1e"/><rect y="39" width="60" height="3" fill="#d52b1e"/><circle cx="15" cy="10" r="5.2" fill="#fff"/><circle cx="17.2" cy="10" r="4.4" fill="#1eb0e6"/><g fill="#fff"><circle cx="24" cy="6" r="1"/><circle cx="28" cy="9" r="1"/><circle cx="32" cy="6" r="1"/><circle cx="24" cy="13" r="1"/><circle cx="28" cy="16" r="1"/><circle cx="32" cy="13" r="1"/></g></g></svg></span><span class="tx"><b>Ўзбекча</b><small>Ўзбек тили</small></span><span class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></a><a role="menuitem" href="/ru/" hreflang="ru" lang="ru"><span class="fl"><svg viewBox="0 0 60 60" aria-hidden="true"><defs><clipPath id="c2"><circle cx="30" cy="30" r="30"/></clipPath></defs><g clip-path="url(#c2)"><rect width="60" height="20" fill="#fff"/><rect y="20" width="60" height="20" fill="#0039a6"/><rect y="40" width="60" height="20" fill="#d52b1e"/></g></svg></span><span class="tx"><b>Русский</b><small>Русский язык</small></span></a></div></div><!--/lg--><a class="pillbtn" data-mag href="#aloqa">Ёзилиш</a><button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i></button></div>
 </div></header>
 <div class="drawer" id="drawer"><a href="#holatlar">Ҳолатлар</a><a href="#xizmat">Хизматлар</a><a href="#doktor">Шифокор</a><a href="#royxat">Рўйхат</a><a href="#faq">Саволлар</a><a href="#aloqa" style="color:var(--clay);font-style:italic">Ёзилиш →</a></div>
 
@@ -941,6 +960,16 @@ if(document.readyState==="complete")init();else addEventListener("load",init);
   box.addEventListener("click",e=>{const a=e.target.closest("a[data-lead]");if(a){e.preventDefault();leadForm()}});
   let seen=false;try{seen=sessionStorage.getItem("chatSeen")==="1"}catch(e){}
   if(!seen)setTimeout(()=>{if(!w.classList.contains("open")){tip.classList.add("show");setTimeout(()=>tip.classList.remove("show"),9000)}},7000);
+})();
+</script>
+<script>
+(()=>{const g=document.getElementById("lg"),b=document.getElementById("lgb");if(!g||!b)return;
+const set=o=>{g.classList.toggle("open",o);b.setAttribute("aria-expanded",o)};
+b.addEventListener("click",e=>{e.stopPropagation();set(!g.classList.contains("open"))});
+document.addEventListener("click",e=>{if(!g.contains(e.target))set(false)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&g.classList.contains("open")){set(false);b.focus()}});
+addEventListener("scroll",()=>set(false),{passive:true});
+try{if(!sessionStorage.getItem("lgSeen")){/*remember choice*/}}catch(e){}
 })();
 </script>
 </body>
