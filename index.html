@@ -12,6 +12,9 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#100b09">
 <link rel="canonical" href="https://dr-zohid.uz/">
+<link rel="alternate" hreflang="uz-Cyrl" href="https://dr-zohid.uz/">
+<link rel="alternate" hreflang="ru" href="https://dr-zohid.uz/ru/">
+<link rel="alternate" hreflang="x-default" href="https://dr-zohid.uz/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Дерматолог Зохид Аширов, Тошкент | Тери, соч ва тирноқ касалликлари">
 <meta property="og:description" content="Олий тоифали дерматовенеролог ва трихолог. Тери, соч ва тирноқ касалликлари. Онлайн консультация ва уйга чақириш. Тошкент, Юнусобод.">
@@ -365,10 +368,10 @@ body.cc input,body.cc textarea,body.cc select{cursor:text!important}
 .cty i{width:7px;height:7px;border-radius:50%;background:#8d7b68;animation:dot 1s infinite}
 .cty i:nth-child(2){animation-delay:.15s}.cty i:nth-child(3){animation-delay:.3s}
 @keyframes dot{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-4px);opacity:1}}
-.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px;align-self:stretch;animation:cmin .45s .1s both}
-.cgrid button{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:14px;border:1px solid rgba(241,231,217,.12);background:#1b1310;color:var(--bone);font:600 13.5px/1.2 var(--sans);text-align:left;cursor:pointer;transition:.2s}
-.cgrid button:hover{border-color:var(--clay);background:#26190f;transform:translateY(-2px)}
-.cgrid svg{flex:none;width:20px;height:20px;stroke:var(--clay);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px;align-self:stretch;animation:cmin .45s .1s both}
+.qgrid button{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:14px;border:1px solid rgba(241,231,217,.12);background:#1b1310;color:var(--bone);font:600 13.5px/1.2 var(--sans);text-align:left;cursor:pointer;transition:.2s}
+.qgrid button:hover{border-color:var(--clay);background:#26190f;transform:translateY(-2px)}
+.qgrid svg{flex:none;width:20px;height:20px;stroke:var(--clay);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .cq{display:none;gap:8px;padding:10px 14px 4px;overflow-x:auto;flex:none;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 22px),transparent)}
 .cq::-webkit-scrollbar{display:none}
 .cw.started .cq{display:flex}
@@ -402,9 +405,11 @@ body.cc input,body.cc textarea,body.cc select{cursor:text!important}
   .cb{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(92px + env(safe-area-inset-bottom,0px))}
   .ct-tip{position:fixed;right:90px;bottom:calc(98px + env(safe-area-inset-bottom,0px))}
   .cp{position:fixed;left:8px;right:8px;bottom:8px;width:auto;height:min(76svh,640px);border-radius:24px}
-  .cgrid button{padding:10px;font-size:13px}
+  .qgrid button{padding:10px;font-size:13px}
 }
 
+.lang{display:inline-flex;align-items:center;justify-content:center;height:46px;min-width:46px;padding:0 12px;border-radius:999px;border:1px solid rgba(241,231,217,.28);color:var(--bone);font:700 12px var(--sans);letter-spacing:.08em;transition:background .3s,color .3s,border-color .3s}.lang:hover{background:var(--bone);color:var(--bg)}
+@media(max-width:380px){.lang{height:42px;min-width:42px;padding:0 9px}.pillbtn{padding:0 16px}}
 /* map */
 .mapw{position:relative;margin-top:clamp(40px,6vw,80px);border-radius:28px;overflow:hidden;border:1px solid rgba(17,12,10,.18);background:#d9cfc1;box-shadow:0 30px 60px -30px rgba(17,12,10,.45)}
 .mapw iframe{display:block;width:100%;height:clamp(360px,46vw,520px);border:0}
@@ -432,7 +437,7 @@ body.cc input,body.cc textarea,body.cc select{cursor:text!important}
 <header class="top" id="top"><div class="hd">
   <a href="#hero" class="logo">Dr.&nbsp;<i>Зохид</i></a>
   <nav class="menu" aria-label="Меню"><a href="#holatlar">Ҳолатлар</a><a href="#xizmat">Хизматлар</a><a href="#doktor">Шифокор</a><a href="#royxat">Рўйхат</a><a href="#faq">Саволлар</a></nav>
-  <div class="hr"><a class="pillbtn" data-mag href="#aloqa">Ёзилиш</a><button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i></button></div>
+  <div class="hr"><a class="lang" href="/ru/" hreflang="ru" lang="ru" aria-label="Русская версия сайта">RU</a><a class="pillbtn" data-mag href="#aloqa">Ёзилиш</a><button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i></button></div>
 </div></header>
 <div class="drawer" id="drawer"><a href="#holatlar">Ҳолатлар</a><a href="#xizmat">Хизматлар</a><a href="#doktor">Шифокор</a><a href="#royxat">Рўйхат</a><a href="#faq">Саволлар</a><a href="#aloqa" style="color:var(--clay);font-style:italic">Ёзилиш →</a></div>
 
@@ -920,7 +925,7 @@ if(document.readyState==="complete")init();else addEventListener("load",init);
   function open(){w.classList.add("open");btn.setAttribute("aria-expanded","true");tip.classList.remove("show");
     if(!started){started=true;
       add('Салом! 👋 Мен <b>Дерматолог Зохид</b> сайтининг ёрдамчисиман. Саволингизни ёзинг ёки қуйидан танланг.<small class="dis">Бу тиббий маслаҳат эмас. Ташхис фақат шифокор кўригида қўйилади.</small>');
-      const g=document.createElement("div");g.className="cgrid";
+      const g=document.createElement("div");g.className="qgrid";
       g.innerHTML=quick.map(k=>'<button type="button" data-k="'+k+'">'+ic(k)+'<span>'+R[k].q+'</span></button>').join("");
       g.addEventListener("click",e=>{const b=e.target.closest("button");if(b&&!busy)ask(R[b.dataset.k].q,b.dataset.k)});
       box.appendChild(g)}

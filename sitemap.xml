@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dr-zohid.uz/</loc><lastmod>2026-10-28</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://dr-zohid.uz/</loc><lastmod>2026-10-28</lastmod><changefreq>monthly</changefreq><priority>1.0</priority><xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://dr-zohid.uz/"/><xhtml:link rel="alternate" hreflang="ru" href="https://dr-zohid.uz/ru/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://dr-zohid.uz/"/></url>
+  <url><loc>https://dr-zohid.uz/ru/</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>1.0</priority><xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://dr-zohid.uz/"/><xhtml:link rel="alternate" hreflang="ru" href="https://dr-zohid.uz/ru/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://dr-zohid.uz/"/></url>
   <url><loc>https://dr-zohid.uz/maqola/</loc><lastmod>2026-10-28</lastmod><priority>0.8</priority></url>
   <url><loc>https://dr-zohid.uz/maqola/vitiligo.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
   <url><loc>https://dr-zohid.uz/maqola/psoriaz.html</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
