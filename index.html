@@ -404,6 +404,19 @@ body.cc input,body.cc textarea,body.cc select{cursor:text!important}
   .cp{position:fixed;left:8px;right:8px;bottom:8px;width:auto;height:min(76svh,640px);border-radius:24px}
   .cgrid button{padding:10px;font-size:13px}
 }
+
+/* map */
+.mapw{position:relative;margin-top:clamp(40px,6vw,80px);border-radius:28px;overflow:hidden;border:1px solid rgba(17,12,10,.18);background:#d9cfc1;box-shadow:0 30px 60px -30px rgba(17,12,10,.45)}
+.mapw iframe{display:block;width:100%;height:clamp(360px,46vw,520px);border:0;filter:saturate(.8) sepia(.12) contrast(1.02)}
+.mapc{position:absolute;left:clamp(14px,2.4vw,32px);bottom:clamp(14px,2.4vw,32px);max-width:360px;padding:22px 22px 20px;border-radius:22px;background:rgba(17,12,10,.94);color:var(--bone);backdrop-filter:blur(8px);box-shadow:0 20px 40px -15px rgba(0,0,0,.6)}
+.mapc small{display:block;font:700 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+.mapc b{display:block;font:500 clamp(21px,2vw,26px)/1.2 var(--serif)}
+.mapc p{margin:8px 0 14px;font:400 13.5px/1.5 var(--sans);color:var(--mut)}
+.mapc .mb{display:flex;flex-wrap:wrap;gap:8px}
+.mapc .mb a{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;font:700 12.5px var(--sans);letter-spacing:.02em;text-decoration:none;border:1px solid rgba(241,231,217,.25);color:var(--bone);transition:.2s}
+.mapc .mb a.pr{background:var(--clay);border-color:var(--clay);color:#110c0a}
+.mapc .mb a:hover{transform:translateY(-1px);border-color:var(--clay)}
+@media(max-width:700px){.mapw{border-radius:22px}.mapw iframe{height:300px}.mapc{position:static;max-width:none;border-radius:0;backdrop-filter:none;box-shadow:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#pre{display:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Консультация қанча туради?", "acceptedAnswer": {"@type": "Answer", "text": "Консультация нархи 300 000 сўм. Тўлов ва қулай вақтни ёзилганингизда келишиб оламиз."}}, {"@type": "Question", "name": "Онлайн консультация ташхис қўя оладими?", "acceptedAnswer": {"@type": "Answer", "text": "Кўп ҳолларда ҳа: шикоят ва аниқ расмлар асосида дастлабки ташхис ва даволаш режаси берилади. Зарур бўлса, юзма-юз кўрик ёки таҳлил тавсия этилади."}}, {"@type": "Question", "name": "Даволаш қанча вақт олади?", "acceptedAnswer": {"@type": "Answer", "text": "Касалликка боғлиқ. Ўткир ҳолатлар кунлар ичида яхшиланади, витилиго, псориаз ва атопик дерматит каби сурункали ҳолатлар узоқ назоратни талаб қилади."}}, {"@type": "Question", "name": "Уйга чақириш қандай ишлайди?", "acceptedAnswer": {"@type": "Answer", "text": "Манзил ва муаммони ёзиб қолдирасиз, келишилган вақтда шифокор келиб кўрик ўтказади."}}, {"@type": "Question", "name": "Маълумотларим махфий сақланадими?", "acceptedAnswer": {"@type": "Answer", "text": "Ҳа. Бемор ҳақидаги барча маълумот ва расмлар тиббий махфийлик остида."}}, {"@type": "Question", "name": "Венерик касалликлар бўйича ҳам мурожаат қилса бўладими?", "acceptedAnswer": {"@type": "Answer", "text": "Ҳа, шифокор дерматовенеролог. Мурожаатлар қатъий махфий қабул қилинади."}}]}</script>
@@ -574,6 +587,15 @@ body.cc input,body.cc textarea,body.cc select{cursor:text!important}
       <div class="f"><label for="f-msg">Муаммо (ихтиёрий)</label><textarea id="f-msg" name="msg" rows="2" placeholder="Нима безовта қилмоқда?"></textarea></div>
       <div class="fs"><button class="btn clay" data-mag type="submit"><span>Аризани юбориш</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><div class="ok" id="ok" role="status"></div></div>
     </form>
+  </div>
+  <div class="mapw" data-up>
+    <iframe title="Клиника харитада: Юнусобод, 17-квартал, 22а" src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5988.598748724384!2d69.311464!3d41.36758!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDIyJzAzLjMiTiA2OcKwMTgnNDEuMyJF!5e0!3m2!1sru!2s!4v1793262465573!5m2!1sru!2s" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div class="mapc">
+      <small>Қабул манзили</small>
+      <b>Тошкент, Юнусобод,<br>17&#8209;квартал, 22а&nbsp;уй</b>
+      <p>Қабулга олдиндан ёзилиш орқали келинг. Йўлни харитада очиш учун тугмани босинг.</p>
+      <div class="mb"><a class="pr" href="https://www.google.com/maps/dir/?api=1&destination=41.36758,69.311464" target="_blank" rel="noopener">Йўл кўрсатиш</a><a href="https://yandex.com/maps/?pt=69.311464,41.36758&z=17&l=map" target="_blank" rel="noopener">Яндекс харита</a><a href="tel:+998909885752">Қўнғироқ</a></div>
+    </div>
   </div>
 </div></section>
 </main>
